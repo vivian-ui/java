@@ -1,0 +1,315 @@
+body{
+    font-family:'Nunito', sans-serif;
+    ;
+    color: #1c1c1c;
+}
+
+h1,h2,h3{
+    font-family:'Asap', sans-serif;
+    color: #000000;
+}
+
+.botao{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #191970;
+    font-size: .9em;
+    border-radius: 3px;
+}
+
+/* --------------------- Navegação --------------------- */
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #191970;
+}
+
+nav > a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 800px;
+    font-size: 32px;
+    font-family: 'Yellowtail', cursive;;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li{
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a{
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* --------------------- Ccabeçalho --------------------- */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/loja.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1{
+    color: #ffffff;
+}
+
+header p{
+    margin-bottom: 2em;
+}
+
+/*--------------------- Sobre --------------------- */
+#sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 20px 20px;
+    background-color: #191970;
+    color: #ffffff;
+}
+
+#sobre h2{
+    color: #ffffff;
+}
+
+#sobre p{
+    margin-bottom: 2.5em;
+    max-width: 1000px;
+}
+
+#sobre .botao{
+    background-color: #f1f1f1;
+    color: #1c1c1c;
+}
+
+/* --------------------- Nossas lojas --------------------- */
+#nossaslojas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+#nossaslojas div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#nossaslojas a{
+    text-decoration: none;
+    color: #1c1c1c;
+}
+/* --------------------- Lanacamentos --------------------- */
+#lancamentos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#lancamentos h2{
+    margin-bottom: 20px;
+}
+
+#lancamentos img{
+    width: 100%;
+}
+
+/* --------------------- Contato --------------------- */
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#contato form{
+    text-align:left;
+
+}
+
+#contato h2{
+    color: #000000;
+}
+
+/* --------------------- Rodapé --------------------- */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #191970;
+    color: #ffffff;
+}
+
+footer img{
+    padding: 10px;
+}
+
+footer a{
+    text-decoration: none;
+
+}
+
+footer .botao {
+    color: #191970;
+    background-color: #f1f1f1;
+}
+
+/* --------------------- Formulario contato --------------------- */
+.formulario{
+    width: 400px;
+    padding: 30px;
+    border:1px solid #ccc;
+}
+.formulario p{
+    width: 100%;
+    font-size: 1.5em;
+}
+.field{
+    width: 100%;
+    margin: 15px 0;
+}
+.field label, 
+.field span{
+    padding-left: 10px;
+    font-size: 1.1em;
+    display: block;
+    width: 100%;
+}
+textarea[type=text],
+input[type=text],input[type=email],
+input[type=number]{
+    width: 100%;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+input[type=submit]{
+    display: block;
+    background-color: #ccc;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* --------------------- Regras de exibição do site em uma tela de computador--------------------- */
+@media screen and (min-width: 768px) {
+    /*nav*/
+    nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul{
+        flex-direction: row;
+        width: 70%;
+    }
+
+    /*Cabeçalho*/
+    header{
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+
+    header p{
+        font-size: 18px;
+    }
+
+    /*Sobre*/
+    #sobre{
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-height: 250px;
+    }
+
+    #sobre p{
+        font-size: 18px;
+    }
+
+    /*Nossas Lojas*/
+    #nossaslojas{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    #nossaslojas h2{
+        text-align: center;
+        text-decoration: center;
+        width: 100%;
+    }
+
+    #nossaslojas div {
+        flex-grow: 1;
+        flex-basis: 150px;
+        padding: 0 10px;
+    }
+
+    /*Lançamentos*/
+    #lancamentos{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #lancamentos h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    #lancamentos img{
+        width: 33.3333333%;
+    }
+
+    /*Contato*/
+    #contato{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+ 
+    #contato h2, #contato p{
+        width: 100%;
+    }
+
+}
