@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Nunito:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="styLesheet" type="text/css" th:href="@{css/normalize.css}" >
+    <link rel="styLesheet" type="text/css" th:href="@{css/style.css}" >
+
+    <title>Loja ACME</title>
+</head>
+<body>
+    <nav id="topo">
+        <a href="#">ACME</a>
+        <ul>
+            <li><a th:href="@{/#sobre}">Sobre</a></li>
+            <li><a th:href="@{/#nossaslojas}">Nossas Lojas</a></li>
+            <li><a th:href="@{/#lancamentos}">Lançamentos</a></li>
+            <li><a th:href="@{/#contato}">Contato</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Loja de Material Esportivo</h1>
+        <p>Fique por Dentro dos Últimos Lançamentos da Moda Esportiva. <br>Visite Nossa Loja Agora Mesmo.<br>Loja Especializada em Moda Esportiva com Diversas Opções para Você Escolher.</p>
+        <a th:href="@{/#lancamentos}" class="botao">Ver mais</a>
+    </header>
+    <section id="sobre">
+        <h2>Sobre</h2>
+        <p>Quando falamos de esporte é preciso escolher com sabedoria e cuidado o que comprar para. ter um bom treino não é mesmo?<br>Por isso a nossa equipe trabalha para te ajudar nisso.</p>
+        <a th:href="@{/#contato}" class="botao">Fale com a gente.</a>
+    </section>
+    <section id="nossaslojas">
+        <h2>Nossas Lojas</h2>
+        <div>
+            <img src="img/localizacao.png" alt="Mapa loja 01">
+            <h3>ACME - Loja 01</h3>
+            <p>Rua: XXXXX, 00 - XXX - Santos/SP.<br><a href="mailto:loja01@email.com"><img src="img/mail.png" alt="E-mail da loja 01"> loja01@email.com</a><br><a href="tel:13123456789"><img src="img/tel.png" alt="Telefone da loja 01"> (13) xxx-xxxx-xxxx</a></p>
+        </div>
+        <div>
+            <img src="img/localizacao.png" alt="Mapa loja 02">
+            <h3>ACME - Loja 02</h3>
+            <p>Rua: XXXXX, 00 - XXX - Santos/SP.<br><a href="mailto:loja02@email.com"><img src="img/mail.png" alt="E-mail da loja 02">  loja02@email.com</a><br><a href="tel:13123456789"><img src="img/tel.png"  alt="Telefone da loja 02"> (13) xxx-xxxx-xxxx</a></p>
+        </div>
+        <div>
+            <img src="img/localizacao.png" alt="Mapa loja 03">
+            <h3>ACME - Loja 03</h3>
+            <p>Rua: XXXXX, 00 - XXX - Santos/SP.<br><a href="mailto:loja03@email.com"><img src="img/mail.png" alt="E-mail da loja 03"> loja03@email.com</a><br><a href="tel:13123456789"><img src="img/tel.png"  alt="Telefone da loja 03"> (13) xxx-xxxx-xxxx</a></p>
+        </div>
+        <div>
+            <img src="img/localizacao.png" alt="Mapa loja 04">
+            <h3>ACME - Loja 04</h3>
+            <p>Rua: XXXXX, 00 - XXX - Santos/SP.<br><a href="mailto:loja04@email.com"><img src="img/mail.png" alt="E-mail da loja 04"> loja04@email.com</a><br><a href="tel:13123456789"><img src="img/tel.png"  alt="Telefone da loja 04"> (13) xxx-xxxx-xxxx</a></p>
+        </div>
+        </section>
+        <section id="lancamentos">
+            <h2>Lançamentos</h2>
+            <img src="img/calçado-01.jpg" alt="Tênis branco">
+            <img src="img/material-esportivo-01.jpg" alt="Material esportivo para jogar Tênis">
+            <img src="img/calçado-02.jpg" alt="Tênis azul">
+            <img src="img/material-esportivo-02.jpg" alt="Material esportivo para atividades ao ar livre">
+            <img src="img/calçado-03.jpg" alt="Tênis azul e branco">
+            <img src="img/material-esportivo-03.jpg" alt="Material esportivo para corridas">
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Vem falar com a gente!</p>
+            <div>
+                <form class="formulario" method="post" action="#"> 
+       
+                    <div class="field">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+                    </div>
+            
+                    <div class="field">
+                        <label for="ano">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>        
+            
+                    <div class="field">
+                        <label for="cor">Mensagem:</label>
+                        <textarea type="text" id="memsagem" name="memsagem" placeholder="Digite sua mensagem" required></textarea>
+                    </div>        
+                    <input type="submit" name="enviar" value="Enviar">
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <img src="img/facebook.png" alt="facebook">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/twitter.png" alt="Twitter">
+                <img src="img/youtube.png" alt="Youtube">
+                <img src="img/whatsapp.png" alt="whatsapp">
+            </div>
+            <a th:href="@{/}" class="botao">voltar</a>
+            <p>Desenvolvido pelo grupo DSRV</p>
+        </footer>
+</body>
+</html>
