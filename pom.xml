@@ -8,11 +8,11 @@
 		<version>2.6.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.herokuapp.lojas-acme</groupId>
-	<artifactId>Acme</artifactId>
+	<groupId>com.acme-lojas-herokuapp</groupId>
+	<artifactId>site</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Acme</name>
-	<description>Sistema de cadastro</description>
+	<name>site</name>
+	<description>Site com cadastro</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

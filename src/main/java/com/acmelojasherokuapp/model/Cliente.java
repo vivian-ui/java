@@ -1,4 +1,4 @@
-package com.herokuapp.lojasacme.Acme.model;
+package com.acmelojasherokuapp.model;
 
 public class Cliente {
 	private int id_Cliente;
@@ -29,7 +29,7 @@ public class Cliente {
 		this.id_Cliente = id_Cliente;
 	}
 
-	public String getNm_Cliente() {
+	public  String getNm_Cliente() {
 		return nm_Cliente;
 	}
 

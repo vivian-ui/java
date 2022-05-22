@@ -1,13 +1,13 @@
-package com.herokuapp.lojasacme.Acme;
+package com.acmelojasherokuapp.site;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AcmeApplication {
+public class SiteApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AcmeApplication.class, args);
+		SpringApplication.run(SiteApplication.class, args);
 	}
 
 }
