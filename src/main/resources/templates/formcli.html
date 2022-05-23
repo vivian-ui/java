@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -35,49 +36,49 @@
         <section id="contato">
             <h2>Cadastro</h2>
             <div>
-                <form class="formulario" method="POST" th:action="@{cliente}" th:object="${cli}"> 
+                <form class="formulario" th:action="@{cliente}" th:object="${cli}" method="POST"> 
+                    
+                     <div>
+                		<label th:for="nome">Nome:</label>
+                		<input type="text" th:field="*{nome}" placeholder="Seu Nome" required="required">
+            		</div>
+
+                    <div>
+                        <label>Endereço:</label>
+                        <input type="text" th:field="*{endereco}">
+                    </div>
+
+                    <div>
+                        <label>CPF:</label>
+                        <input type="text" th:field="*{cpf}">
+                    </div>
+
+                    <div>
+                        <label>Cidade:</label>
+                        <input type="text" th:field="*{cidade}">
+                    </div>
+
+                    <div>
+                        <label>Bairro:</label>
+                        <input type="text" th:field="*{bairro}">
+                    </div>
                     
                     <div>
-                        <label th:for="name">Nome:</label>
-                        <input type="text" th:field="*{name}" placeholder="Seu Nome" required="required">
-                    </div>
-
-                    <div>
-                        <label th:for="endereco">Endereço:</label>
-                        <input type="text" th:field="*{endereco}" placeholder="Seu Endereço" required="required">
-                    </div>
-
-                    <div>
-                        <label th:for="cpf">CPF:</label>
-                        <input type="text" th:field="*{cpf}" placeholder="Seu CPF" required="required">
-                    </div>
-
-                    <div>
-                        <label th:for="cidade">Cidade:</label>
-                        <input type="text" th:field="*{cidade}" placeholder="Sua Cidade" required="required">
-                    </div>
-
-                    <div>
-                        <label th:for="bairro">Bairro:</label>
-                        <input type="text" th:field="*{bairro}" placeholder="Seu Bairro" required="required">
-                    </div>
-                    
-                    <div>
-                        <label th:for="estado">Estado:</label>
-                        <input type="text" th:field="*{estado}" placeholder="Seu Estado" required="required">
+                        <label>Estado:</label>
+                        <input type="text" th:field="*{estado}">
                     </div>
                      
                     <div>
-                        <label th:for="telefone">Telefone:</label>
-                        <input type="text" th:field="*{telefone}" placeholder="Seu Telefone" required="required">
+                        <label>Telefone:</label>
+                        <input type="text" th:field="*{telefone}">
                     </div>
                     
                     <div>
-                        <label th:for="email">E-mail:</label>
-                        <input type="text" th:field="*{email}" placeholder="Seu E-mail" required="required">
+                        <label>E-mail:</label>
+                        <input type="text" th:field="*{email}">
                     </div>
 
-                    <input type="submit" name="enviar" value="Enviar">
+                    <input type="submit" value="Enviar">
                 </form>
                 <a th:href="@{/}">Voltar</a>
             </div>

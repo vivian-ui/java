@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.acmelojasherokuapp.model.Cliente;
+import com.acmelojasherokuapp.model.ClienteService;
 
 @Controller
 @ComponentScan("com.acmelojasherokuapp.model")
@@ -48,13 +49,13 @@ public class ClienteController {
 	
 	@GetMapping("/cliente")
 	public String formcli(Model model) {
-		model.addAttribute("cli", new Cliente());
+		model.addAttribute("cli", new Cliente(0, "", "","","","","","",""));
 		return "formcli";
 	}
 	
 	@PostMapping("/cliente")
 	public String inserircli(@ModelAttribute Cliente cli){
-		ClienteServe cs = context.getBean(ClienteServe.class);
+		ClienteService cs = context.getBean(ClienteService.class);
 		cs.inserirCliente(cli);
 		return "sucesso";
 	}
