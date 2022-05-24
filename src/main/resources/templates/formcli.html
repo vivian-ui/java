@@ -23,7 +23,6 @@
             <li><a th:href="@{/#sobre}">Sobre</a></li>
             <li><a th:href="@{/#nossaslojas}">Nossas Lojas</a></li>
             <li><a th:href="@{/#lancamentos}">Lançamentos</a></li>
-            <li><a th:href="@{/#contato}">Contato</a></li>
             <li><a th:href="@{/cliente}">Cadastre-se</a></li>
             
         </ul>
@@ -39,43 +38,23 @@
                 <form class="formulario" th:action="@{cliente}" th:object="${cli}" method="POST"> 
                     
                      <div>
-                		<label th:for="nome">Nome:</label>
-                		<input type="text" th:field="*{nome}" placeholder="Seu Nome" required="required">
+                		<label th:for="nm_Cliente">Nome:</label>
+                		<input type="text" th:field="*{nm_Cliente}" placeholder="Seu Nome" required="required">
             		</div>
 
                     <div>
-                        <label>Endereço:</label>
-                        <input type="text" th:field="*{endereco}">
-                    </div>
-
-                    <div>
-                        <label>CPF:</label>
-                        <input type="text" th:field="*{cpf}">
-                    </div>
-
-                    <div>
-                        <label>Cidade:</label>
-                        <input type="text" th:field="*{cidade}">
-                    </div>
-
-                    <div>
-                        <label>Bairro:</label>
-                        <input type="text" th:field="*{bairro}">
-                    </div>
-                    
-                    <div>
-                        <label>Estado:</label>
-                        <input type="text" th:field="*{estado}">
+                        <label th:for="ds_Endereco">Endereço:</label>
+                        <input type="text" th:field="*{ds_Endereco}" placeholder="Seu Endereço" required="required">
                     </div>
                      
                     <div>
-                        <label>Telefone:</label>
-                        <input type="text" th:field="*{telefone}">
+                        <label th:for="cd_Telefone">Telefone:</label>
+                        <input type="text" th:field="*{cd_Telefone}" placeholder="Seu Telefone" required="required">
                     </div>
                     
                     <div>
-                        <label>E-mail:</label>
-                        <input type="text" th:field="*{email}">
+                        <label th:for="ds_Email">E-mail:</label>
+                        <input type="text" th:field="*{ds_Email}" placeholder="Seu E-mail" required="required">
                     </div>
 
                     <input type="submit" value="Enviar">

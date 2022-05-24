@@ -49,7 +49,7 @@ public class ClienteController {
 	
 	@GetMapping("/cliente")
 	public String formcli(Model model) {
-		model.addAttribute("cli", new Cliente(0, "", "","","","","","",""));
+		model.addAttribute("cli", new Cliente(0, "", "", "", ""));
 		return "formcli";
 	}
 	
