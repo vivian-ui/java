@@ -21,12 +21,12 @@ import org.springframework.stereotype.Repository;
 		}
 		
 		public void inserirCliente(Cliente cliente){
-			String sql = "INSERT INTO Cliente(nm_Cliente, ds_Endereco, cd_Telefone, ds_Email)" + "VALUES (?,?,?,?)";
+			String sql = "INSERT INTO form(nome, endereco, telefone, email)" + "VALUES (?,?,?,?)";
 			Object[] obj = new Object[4];
-			obj[0] = cliente.getNm_Cliente();
-			obj[1] = cliente.getDs_Endereco();
-			obj[2] = cliente.getCd_Telefone();
-			obj[3] = cliente.getDs_Email();
+			obj[0] = cliente.getNome();
+			obj[1] = cliente.getEndereco();
+			obj[2] = cliente.getTelefone();
+			obj[3] = cliente.getEmail();
 			jdbc.update(sql, obj);
 		}
 }

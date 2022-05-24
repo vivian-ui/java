@@ -1,7 +1,7 @@
-CREATE TABLE IF NOT EXISTS cliente(
-	id_Cliente serial PRIMARY KEY,
-	nm_Cliente 		varchar(50),
-	ds_Endereco     varchar(50),
-    cd_Telefone     varchar(50),
-    ds_Email        varchar(50)
+CREATE TABLE IF NOT EXISTS form(
+	id serial PRIMARY KEY,
+	nome	    varchar(50),
+	endereco     varchar(50),
+    telefone     varchar(50),
+    email        varchar(50)
 );

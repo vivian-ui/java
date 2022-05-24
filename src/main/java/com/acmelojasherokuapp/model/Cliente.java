@@ -1,58 +1,60 @@
 package com.acmelojasherokuapp.model;
 
 public class Cliente {
-	private int id_Cliente;
-	private String nm_Cliente, ds_Endereco, cd_Telefone, ds_Email;
+	private int id;
+	private String nome, endereco, telefone, email;
 	
 	public Cliente() {
 		
 	}
 		
-	public Cliente(int id_Cliente, String nm_Cliente, String ds_Endereco, String cd_Telefone, String ds_Email) {
-		this.id_Cliente = id_Cliente;
-		this.nm_Cliente = nm_Cliente;
-		this.ds_Endereco = ds_Endereco;
-		this.cd_Telefone = cd_Telefone;
-		this.ds_Email = ds_Email;
+	public Cliente(int id, String nome, String endereco, String telefone, String email) {
+		this.id = id;
+		this.nome = nome;
+		this.endereco = endereco;
+		this.telefone = telefone;
+		this.email = email;
 	}
 
-	public int getId_Cliente() {
-		return id_Cliente;
+	public int getId() {
+		return id;
 	}
 
-	public void setId_Cliente(int id_Cliente) {
-		this.id_Cliente = id_Cliente;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public  String getNm_Cliente() {
-		return nm_Cliente;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setNm_Cliente(String nm_Cliente) {
-		this.nm_Cliente = nm_Cliente;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getDs_Endereco() {
-		return ds_Endereco;
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setDs_Endereco(String ds_Endereco) {
-		this.ds_Endereco = ds_Endereco;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
-	public String getCd_Telefone() {
-		return cd_Telefone;
+	public String getTelefone() {
+		return telefone;
 	}
 
-	public void setCd_Telefone(String cd_Telefone) {
-		this.cd_Telefone = cd_Telefone;
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
 
-	public String getDs_Email() {
-		return ds_Email;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setDs_Email(String ds_Email) {
-		this.ds_Email = ds_Email;
+	public void setEmail(String email) {
+		this.email = email;
 	}
+	
+
 }

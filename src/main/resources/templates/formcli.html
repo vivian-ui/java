@@ -38,23 +38,23 @@
                 <form class="formulario" th:action="@{cliente}" th:object="${cli}" method="POST"> 
                     
                      <div>
-                		<label th:for="nm_Cliente">Nome:</label>
-                		<input type="text" th:field="*{nm_Cliente}" placeholder="Seu Nome" required="required">
+                		<label th:for="nome">Nome:</label>
+                		<input type="text" th:field="*{nome}" placeholder="Seu Nome" required="required">
             		</div>
 
                     <div>
-                        <label th:for="ds_Endereco">Endereço:</label>
-                        <input type="text" th:field="*{ds_Endereco}" placeholder="Seu Endereço" required="required">
+                        <label th:for="endereco">Endereço:</label>
+                        <input type="text" th:field="*{endereco}" placeholder="Seu Endereço" required="required">
                     </div>
                      
                     <div>
-                        <label th:for="cd_Telefone">Telefone:</label>
-                        <input type="text" th:field="*{cd_Telefone}" placeholder="Seu Telefone" required="required">
+                        <label th:for="telefone">Telefone:</label>
+                        <input type="text" th:field="*{telefone}" placeholder="Seu Telefone" required="required">
                     </div>
                     
                     <div>
-                        <label th:for="ds_Email">E-mail:</label>
-                        <input type="text" th:field="*{ds_Email}" placeholder="Seu E-mail" required="required">
+                        <label th:for="email">E-mail:</label>
+                        <input type="text" th:field="*{email}" placeholder="Seu E-mail" required="required">
                     </div>
 
                     <input type="submit" value="Enviar">

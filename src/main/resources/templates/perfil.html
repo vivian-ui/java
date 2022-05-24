@@ -6,14 +6,10 @@
 </head>
 
 <body>
-	<p th:text="${'Perfil de ' + nm_Cliente}"></p>
-	<p th:text="${'Endereco' + ds_Endereco}"></p>
-	<p th:text="${'CPF' + cd_CPF}"></p>	
-	<p th:text="${'Cidade' + nm_Cidade}"></p>	
-	<p th:text="${'Bairro' + nm_Bairro}"></p>	
-	<p th:text="${'Estado' + sg_Estado}"></p>	
-	<p th:text="${'Telefone' + cd_Telefone}"></p>	
-	<p th:text="${'E-mail' + ds_Email}"></p>	
+	<p th:text="${'Perfil de ' + nome}"></p>
+	<p th:text="${'Endereco' + endereco}"></p>
+	<p th:text="${'Telefone' + telefone}"></p>	
+	<p th:text="${'E-mail' + email}"></p>	
 		
 	<a th:href="@{/}" class="botao">voltar</a>
 </body>
