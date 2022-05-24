@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Nunito:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="styLesheet" type="text/css" th:href="@{css/normalize.css}" >
+    <link rel="styLesheet" type="text/css" th:href="@{css/style.css}" >
+
+    <title>Loja ACME</title>
+</head>
+<body>
+    <nav id="topo">
+        <a href="#">ACME</a>
+        <ul>
+            <li><a th:href="@{/#sobre}">Sobre</a></li>
+            <li><a th:href="@{/#nossaslojas}">Nossas Lojas</a></li>
+            <li><a th:href="@{/#lancamentos}">Lançamentos</a></li>
+            <li><a th:href="@{/cliente}">Cadastre-se</a></li>
+            
+        </ul>
+    </nav>
+    <header>
+        <h1>Loja de Material Esportivo</h1>
+        <p>Fique por Dentro dos Últimos Lançamentos da Moda Esportiva. <br>Visite Nossa Loja Agora Mesmo.<br>Loja Especializada em Moda Esportiva com Diversas Opções para Você Escolher.</p>
+        <a th:href="@{/#lancamentos}" class="botao">Ver mais</a>
+    </header>
+        <section id="contato">
+            <h2>Atualização de Clientes</h2>
+            <div>
+                <form class="formulario" action="#" th:action="@{'/upd/' + ${id}}" th:object="${cliente}" method="POST"> 
+                    
+                     <div>
+                		<label th:for="nome">Nome:</label>
+                		<input type="text" th:field="*{nome}">
+            		</div>
+
+                    <div>
+                        <label th:for="endereco">Endereço:</label>
+                        <input type="text" th:field="*{endereco}" >
+                    </div>
+                     
+                    <div>
+                        <label th:for="telefone">Telefone:</label>
+                        <input type="text" th:field="*{telefone}" >
+                    </div>
+                    
+                    <div>
+                        <label th:for="email">E-mail:</label>
+                        <input type="text" th:field="*{email}" >
+                    </div>
+
+                    <input type="submit" value="Editar">
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <img src="img/facebook.png" alt="facebook">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/twitter.png" alt="Twitter">
+                <img src="img/youtube.png" alt="Youtube">
+                <img src="img/whatsapp.png" alt="whatsapp">
+            </div>
+            <a th:href="@{/}" class="botao">voltar</a>
+            <p>Desenvolvido pelo grupo DSRV</p>
+        </footer>
+</body>
+</html>
