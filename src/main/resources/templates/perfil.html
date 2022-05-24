@@ -1,15 +1,56 @@
-<!DOCTYOE html>
-<html xmlns:th="http://www.thymeLeaf.org">
-<head>	
-	<meta charset="ISO-8859-1">
-	<title>PERFIL DO CLIENTE</title>
-</head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Nunito:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="styLesheet" type="text/css" th:href="@{css/normalize.css}" >
+    <link rel="styLesheet" type="text/css" th:href="@{css/style.css}" >
+
+    <title>Loja ACME</title>
+</head>
 <body>
-	<p th:text="${'Perfil de ' + nome}"></p>
-	<p th:text="${'Endereco' + endereco}"></p>
-	<p th:text="${'Telefone' + telefone}"></p>	
-	<p th:text="${'E-mail' + email}"></p>	
-		
-	<a th:href="@{/}" class="botao">voltar</a>
+    <nav id="topo">
+        <a href="#">ACME</a>
+        <ul>
+            <li><a th:href="@{/#sobre}">Sobre</a></li>
+            <li><a th:href="@{/#nossaslojas}">Nossas Lojas</a></li>
+            <li><a th:href="@{/#lancamentos}">Lançamentos</a></li>
+            <li><a th:href="@{/cliente}">Cadastre-se</a></li>
+            
+        </ul>
+    </nav>
+    <header>
+        <h1>Loja de Material Esportivo</h1>
+        <p>Fique por Dentro dos Últimos Lançamentos da Moda Esportiva. <br>Visite Nossa Loja Agora Mesmo.<br>Loja Especializada em Moda Esportiva com Diversas Opções para Você Escolher.</p>
+        <a th:href="@{/#lancamentos}" class="botao">Ver mais</a>
+    </header>
+        <section id="contato">
+            <h2>Perfil do Cliente</h2>
+            <div>
+                <p th:text="${'Perfil de ' + nome}"></p>
+				<p th:text="${'Endereco' + endereco}"></p>
+				<p th:text="${'Telefone' + telefone}"></p>	
+				<p th:text="${'E-mail' + email}"></p>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <img src="img/facebook.png" alt="facebook">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/twitter.png" alt="Twitter">
+                <img src="img/youtube.png" alt="Youtube">
+                <img src="img/whatsapp.png" alt="whatsapp">
+            </div>
+            <a th:href="@{/}" class="botao">voltar</a>
+            <p>Desenvolvido pelo grupo DSRV</p>
+        </footer>
 </body>
+</html>

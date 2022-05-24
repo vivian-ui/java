@@ -1,5 +1,7 @@
 package com.acmelojasherokuapp.model;
 
+import java.util.Map;
+
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
@@ -29,4 +31,14 @@ import org.springframework.stereotype.Repository;
 			obj[3] = cliente.getEmail();
 			jdbc.update(sql, obj);
 		}
+		
+		public Map<String, Object> getCliente(int id){
+			String sql = "SELECT * FROM form WHERE form.id = ?";
+			Object[] obj = new Object[1];
+			obj[0] = id;
+			//id que veio da rota fica no lugar ?
+			return jdbc.queryForMap(sql,obj);
+		}
+		
+		
 }
