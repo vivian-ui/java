@@ -19,8 +19,8 @@ public class ClienteService {
 	public Map<String,Object> getCliente(int id){
 		return cdao.getCliente(id);
 	}
-	
-	public List<Map<String,Object>> getClientes(){
+	//lista de registros 
+	public List<Map<String, Object>> getClientes(){
 		return cdao.getClientes();
 	}
 	

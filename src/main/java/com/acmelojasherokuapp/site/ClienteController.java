@@ -64,7 +64,7 @@ public class ClienteController {
 		return "sucesso";
 	}
 	
-	//localhost:8080/perfi/2
+	//localhost:8080/perfil/2
 	@GetMapping("/perfil/{id}")
 	public String getPerfil(@PathVariable("id") int id, Model model) {
 		ClienteService cs = context.getBean(ClienteService.class);
@@ -77,6 +77,7 @@ public class ClienteController {
 		return "perfil";
 	}
 	
+	//listar
 	@GetMapping("/clientes")
 	public String listar(Model model) {
 		ClienteService pdao = context.getBean(ClienteService.class);
@@ -84,5 +85,13 @@ public class ClienteController {
 		model.addAttribute("clientes", clientes);
 		return "formlista";
 	}
-
+	
+	//apagar
+	@PostMapping("/apagar/cliente/{id}")
+	public String apagarCliente(@PathVariable("id") int id) {
+		ClienteService cdao = context.getBean(ClienteService.class);
+		cdao.deleteCliente(id);
+		return "redirect:/clientes";
+	}
+	
 }
