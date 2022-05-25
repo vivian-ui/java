@@ -51,6 +51,19 @@ public class ClienteController {
 		return "contato";
 	}
 	
+	@GetMapping("/buscar/nome")
+	public String buscarNome(@ModelAttribute Cliente cli, Model model) {
+		ClienteService cs = context.getBean(ClienteService.class);
+		Map<String,Object> reg = cs.buscarCliNome(cli.getNome()).get(0);
+		return "redirect:/perfil/" + reg.get("id");
+	}
+	
+	@GetMapping("/buscar")
+	public String buscarNome(Model model) {
+		model.addAttribute("cliente", new Cliente());
+		return "buscaNome";
+	}
+	
 	@GetMapping("/cliente")
 	public String formcli(Model model) {
 		model.addAttribute("cli", new Cliente(0, "", "", "", ""));
@@ -91,6 +104,24 @@ public class ClienteController {
 	public String apagarCliente(@PathVariable("id") int id) {
 		ClienteService cdao = context.getBean(ClienteService.class);
 		cdao.deleteCliente(id);
+		return "redirect:/clientes";
+	}
+	
+	//atualizar
+	@GetMapping("/upd/{id}")
+	public String formAtualizar(@PathVariable("id") int id, Model model) {
+		ClienteService cdao = context.getBean(ClienteService.class);
+		Map<String,Object> regs = cdao.getCliente(id);
+		Cliente cli = new Cliente(id,regs.get("nome").toString(), regs.get("endereco").toString(), regs.get("telefone").toString(), regs.get("email").toString());
+		model.addAttribute("cliente", cli);
+		model.addAttribute("id",id);
+		return "formupdcliente";
+	}
+	
+	@PostMapping("/upd/{id}")
+	public String atualizarCliente(@PathVariable("id") int id, Model model, @ModelAttribute Cliente cli){
+		ClienteService cdao = context.getBean(ClienteService.class);
+		cdao.atualizarCliente(id, cli);
 		return "redirect:/clientes";
 	}
 	

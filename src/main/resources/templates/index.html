@@ -17,12 +17,14 @@
 </head>
 <body>
     <nav id="topo">
-        <a href="#">ACME</a>
+        <a "th:href="@{/}"">ACME</a>
         <ul>
             <li><a th:href="@{/#sobre}">Sobre</a></li>
             <li><a th:href="@{/#nossaslojas}">Nossas Lojas</a></li>
             <li><a th:href="@{/#lancamentos}">Lançamentos</a></li>
             <li><a th:href="@{/cliente}">Cadastre-se</a></li>
+            <li><a th:href="@{/clientes}">Lista Clientes</a></li>
+            <li><a th:href="@{/buscar}">Busca por Nome</a></li>
             
         </ul>
     </nav>

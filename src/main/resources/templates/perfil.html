@@ -11,20 +11,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Nunito:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
-    <link rel="styLesheet" type="text/css" th:href="@{css/normalize.css}" >
-    <link rel="styLesheet" type="text/css" th:href="@{css/style.css}" >
+    <link rel="styLesheet" type="text/css" th:href="@{/css/normalize.css}" >
+    <link rel="styLesheet" type="text/css" th:href="@{/css/style.css}" >
 
     <title>Loja ACME</title>
 </head>
 <body>
     <nav id="topo">
-        <a href="#">ACME</a>
+        <a "th:href="@{/}"">ACME</a>
         <ul>
             <li><a th:href="@{/#sobre}">Sobre</a></li>
             <li><a th:href="@{/#nossaslojas}">Nossas Lojas</a></li>
             <li><a th:href="@{/#lancamentos}">Lançamentos</a></li>
             <li><a th:href="@{/cliente}">Cadastre-se</a></li>
-            
+            <li><a th:href="@{/clientes}">Lista Clientes</a></li>
+            <li><a th:href="@{/buscar}">Busca por Nome</a></li>            
         </ul>
     </nav>
     <header>
@@ -43,11 +44,11 @@
         </section>
         <footer>
             <div>
-                <img src="img/facebook.png" alt="facebook">
-                <img src="img/instagram.png" alt="Instagram">
-                <img src="img/twitter.png" alt="Twitter">
-                <img src="img/youtube.png" alt="Youtube">
-                <img src="img/whatsapp.png" alt="whatsapp">
+                <img src="/img/facebook.png" alt="facebook">
+                <img src="/img/instagram.png" alt="Instagram">
+                <img src="/img/twitter.png" alt="Twitter">
+                <img src="/img/youtube.png" alt="Youtube">
+                <img src="/img/whatsapp.png" alt="whatsapp">
             </div>
             <a th:href="@{/}" class="botao">voltar</a>
             <p>Desenvolvido pelo grupo DSRV</p>

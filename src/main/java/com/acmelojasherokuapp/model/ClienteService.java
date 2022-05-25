@@ -27,4 +27,14 @@ public class ClienteService {
 	public void deleteCliente(int id) {
 		cdao.deleteCliente(id);
 	}
+	
+	public void atualizarCliente(int id, Cliente c) {
+		cdao.atualizarCliente(id, c);
+	}
+
+	public Map<String, Object> buscarCliNome(String nome) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
