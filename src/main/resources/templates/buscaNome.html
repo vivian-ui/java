@@ -37,7 +37,7 @@
         <section id="contato">
             <h2>Busca por Nome</h2>
             <div>
-                <form class="formulario" th:action="@{/buscar/nome}" th:object="${cliente}" method="get"> 
+                <form class="formulario" action="#" th:action="@{/buscar/nome}"  method="get" th:object="${cliente}" required="required"> 
                     
                      <div>
                 		<label th:for="nome">Nome:</label>

@@ -31,10 +31,9 @@ public class ClienteService {
 	public void atualizarCliente(int id, Cliente c) {
 		cdao.atualizarCliente(id, c);
 	}
-
-	public Map<String, Object> buscarCliNome(String nome) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public List<Map<String,Object>> buscarCliNome(String nome){
+		return cdao.buscarCliente(nome);
 	}
 
 }

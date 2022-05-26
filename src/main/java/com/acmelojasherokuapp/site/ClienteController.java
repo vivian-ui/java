@@ -51,7 +51,7 @@ public class ClienteController {
 		return "contato";
 	}
 	
-	@GetMapping("/buscar/nome")
+	@GetMapping("/buscar/{nome}")
 	public String buscarNome(@ModelAttribute Cliente cli, Model model) {
 		ClienteService cs = context.getBean(ClienteService.class);
 		Map<String,Object> reg = cs.buscarCliNome(cli.getNome()).get(0);
