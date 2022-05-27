@@ -3,7 +3,6 @@ package com.acmelojasherokuapp.site;
 import java.util.List;
 import java.util.Map;
 
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -76,7 +75,6 @@ public class ClienteController {
 	
 	@PostMapping("/cliente")
 	public String inserircli(@ModelAttribute Cliente cli){
-
 		ClienteService cs = context.getBean(ClienteService.class);
 		cs.inserirCliente(cli);
 		return "sucesso";
