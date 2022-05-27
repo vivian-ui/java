@@ -38,16 +38,16 @@
             <div>
                 <form class="formulario" th:action="@{cliente}" th:object="${cli}" method="POST"> 
                     
-                     <div>
+                    <div>
                 		<label th:for="nome">Nome:</label>
                 		<input type="text" th:field="*{nome}" placeholder="Seu Nome" required="required">
-            		</div>
-
+                	</div>
+                	
                     <div>
-                        <label th:for="endereco">Endereço:</label>
-                        <input type="text" th:field="*{endereco}" placeholder="Seu Endereço" required="required">
-                    </div>
-                     
+                		<label th:for="endereco">Nome:</label>
+                		<input type="text" th:field="*{endereco}" placeholder="Seu Endereço" required="required">
+           		   	</div>
+                	
                     <div>
                         <label th:for="telefone">Telefone:</label>
                         <input type="text" th:field="*{telefone}" placeholder="Seu Telefone" required="required">

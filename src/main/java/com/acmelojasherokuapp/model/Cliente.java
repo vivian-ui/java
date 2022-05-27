@@ -2,7 +2,14 @@ package com.acmelojasherokuapp.model;
 
 public class Cliente {
 	private int id;
-	private String nome, endereco, telefone, email;
+	
+	private String nome;
+	
+	private String endereco;
+	
+	private String telefone;
+	
+	private String email;
 	
 	public Cliente() {
 		
