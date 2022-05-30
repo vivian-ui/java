@@ -50,12 +50,12 @@
                      
                     <div>
                         <label th:for="telefone">Telefone:</label>
-                        <input type="text" th:field="*{telefone}" >
+                        <input type="text" th:field="*{telefone}" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" title="(xx) xxxxx-xxxx">
                     </div>
                     
                     <div>
                         <label th:for="email">E-mail:</label>
-                        <input type="text" th:field="*{email}" >
+                        <input type="text" th:field="*{email}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="seu@email.com">
                     </div>
 
                     <input type="submit" value="Editar">
